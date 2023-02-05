@@ -13,20 +13,24 @@
  *     }
  * }
  */
-class Solution {
+public class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> res = new ArrayList<>();
-        Stack <TreeNode> stack = new Stack<>();
-        TreeNode curr = root;
-        while(curr != null || !stack.isEmpty()){
-            while(curr != null){
-                stack.push(curr);
-                curr = curr.left;
+        List<Integer> result = new LinkedList<Integer>();
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        TreeNode node = root;
+        while (true) {
+            if (node != null){
+                stack.push(node);
+                node = node.left;
+                continue;
             }
-            curr = stack.pop();
-            res.add(curr.val);
-            curr = curr.right;
+            if (stack.size() == 0) {
+                break;
+            }
+            node = stack.pop();
+            result.add(node.val);
+            node = node.right;
         }
-        return res;
+        return result;
     }
 }
