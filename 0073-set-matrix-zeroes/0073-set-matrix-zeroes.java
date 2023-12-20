@@ -1,5 +1,47 @@
 // 1. Brute forcs approach TC ~= n^3
 
+// class Solution {
+//     public void setZeroes(int[][] matrix) {
+//         int n = matrix.length;
+//         int m = matrix[0].length;
+        
+//         for(int i=0; i<n; i++){
+//             for(int j=0; j<m; j++){
+//                 if(matrix[i][j] == 0){
+//                     markRow(i, matrix);
+//                     markCol(j, matrix);
+//                 }
+//             }
+//         }
+        
+//         for(int i=0; i<n; i++){
+//             for(int j=0; j<m; j++){
+//                 if(matrix[i][j] == -1){
+//                     matrix[i][j] = 0;
+//                 }
+//             }
+//         }
+//     }
+//     public static void markRow(int i, int[][] matrix){
+//         int n = matrix.length;
+//         int m = matrix[0].length;
+//         for(int j=0;j<m; j++){
+//             if(matrix[i][j] != 0){
+//                 matrix[i][j] = -1;                               //This solution will give wrong output if the input contain -1 but it is correct if no negaative is present in the input matrix.
+//             }
+//         }
+//     }
+//     public static void markCol(int j, int[][] matrix){
+//         int n = matrix.length;
+//         int m = matrix[0].length;
+//         for(int i=0;i<n; i++){
+//             if(matrix[i][j] != 0){
+//                 matrix[i][j] = -1;
+//             }
+//         }
+//     }
+// }
+
 class Solution {
     public void setZeroes(int[][] matrix) {
         int n = matrix.length;
@@ -41,7 +83,6 @@ class Solution {
         }
     }
 }
-
 
 
 // class Solution {
