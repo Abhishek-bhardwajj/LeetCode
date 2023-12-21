@@ -1,4 +1,4 @@
-// 1. Brute force approach O(n^2)   Applicable only for the smaller/ limited size array values.
+// 1. Brute force approach O(n^2)   Applicable only for the smaller/ limited size arrays.
 
 // class Solution {
 //     public int maxProfit(int[] prices) {
